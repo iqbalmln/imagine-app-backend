@@ -4,9 +4,9 @@ package bootstrap
 import (
 	"fmt"
 
-	"gitlab.com/go_graphql/internal/common"
-	"gitlab.com/go_graphql/pkg/generator"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/common"
+	"gitlab.privy.id/go_graphql/pkg/generator"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 // RegistrySnowflake setup snowflake generator

@@ -2,9 +2,9 @@ package bootstrap
 
 import (
 	"fmt"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/pkg/file"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/pkg/file"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 	"sync"
 )
 

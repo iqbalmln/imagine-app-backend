@@ -9,7 +9,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 const (
@@ -120,7 +120,7 @@ func getCaller() *runtime.Frame {
 		minimumCallerDepth = knownLogrusFrames
 	})
 
-	lpkg := `gitlab.com/go_graphql/pkg/logger`
+	lpkg := `gitlab.privy.id/go_graphql/pkg/logger`
 
 	// Restrict the lookback frames to avoid runaway lookups
 	pcs := make([]uintptr, maximumCallerDepth)

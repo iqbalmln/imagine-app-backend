@@ -12,7 +12,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
 
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 const (

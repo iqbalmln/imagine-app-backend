@@ -5,15 +5,15 @@ package {{.PackageName}}
 import (
 	"fmt"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/common"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/presentations"
-	"gitlab.com/go_graphql/internal/repositories"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/tracer"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/common"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/presentations"
+	"gitlab.privy.id/go_graphql/internal/repositories"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/tracer"
 
-	ucase "gitlab.com/go_graphql/internal/ucase/contract"
+	ucase "gitlab.privy.id/go_graphql/internal/ucase/contract"
 )
 
 type {{.StructName}}List struct {

@@ -5,9 +5,9 @@ import (
 	"context"
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/ucase/contract"
 )
 
 // HttpRequest handler func wrapper

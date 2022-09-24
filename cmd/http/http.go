@@ -3,9 +3,9 @@ package http
 import (
 	"context"
 
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/server"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/server"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 // Start function handler starting http listener

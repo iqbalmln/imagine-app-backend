@@ -2,9 +2,9 @@
 package bootstrap
 
 import (
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/msgx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/msgx"
 )
 
 func RegistryMessage() {

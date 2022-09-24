@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 func fileExist(fName string) bool {

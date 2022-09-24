@@ -48,9 +48,9 @@ mkdir $HOME/go
 mkdir $HOME/go/src
 mkdir $HOME/go/pkg
 mkdir $HOME/go/bin
-mkdir -p $HOME/go/src/gitlab.com/go_graphql
+mkdir -p $HOME/go/src/gitlab.privy.id/go_graphql
 chmod -R 775 $HOME/go
-cd $HOME/go/src/gitlab.com/go_graphql
+cd $HOME/go/src/gitlab.privy.id/go_graphql
 export GOPATH=$HOME/go
 ```    
 ```bash
@@ -66,9 +66,9 @@ source $HOME/.bash_profile
 #### 3. Build the application    
 ```bash
 # run command :
-cd $HOME/go/src/gitlab.com/go_graphql
-git clone -b development https://gitlab.com/go_graphql .
-cd $HOME/go/src/gitlab.com/go_graphql
+cd $HOME/go/src/gitlab.privy.id/go_graphql
+git clone -b development https://gitlab.privy.id/go_graphql .
+cd $HOME/go/src/gitlab.privy.id/go_graphql
 go mod tidy && go mod download && go mod vendor
 cp config/app.yaml.dist config/app.yaml
 # edit config/app.yaml with server environtment

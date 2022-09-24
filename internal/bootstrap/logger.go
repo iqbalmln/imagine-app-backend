@@ -2,9 +2,9 @@
 package bootstrap
 
 import (
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 func RegistryLogger(cfg *appctx.Config) {

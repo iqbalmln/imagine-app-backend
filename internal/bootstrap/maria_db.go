@@ -4,10 +4,10 @@ package bootstrap
 import (
 	"time"
 
-	config "gitlab.com/go_graphql/internal/appctx"
+	config "gitlab.privy.id/go_graphql/internal/appctx"
 
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/mariadb"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/mariadb"
 )
 
 // RegistryMariaDB initialize maria or mysql session

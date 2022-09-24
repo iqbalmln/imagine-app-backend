@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"sync"
 
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/pkg/msgx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/pkg/msgx"
 )
 
 var (

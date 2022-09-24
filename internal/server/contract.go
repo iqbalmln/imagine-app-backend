@@ -5,8 +5,8 @@ import (
 	"context"
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	ucase "gitlab.com/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	ucase "gitlab.privy.id/go_graphql/internal/ucase/contract"
 )
 
 // httpHandlerFunc abstraction for http handler

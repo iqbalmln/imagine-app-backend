@@ -7,7 +7,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 var (

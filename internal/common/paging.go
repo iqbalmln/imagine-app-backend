@@ -3,7 +3,7 @@ package common
 import (
 	"math"
 
-	"gitlab.com/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/consts"
 )
 
 // LimitDefaultValue set default value limit

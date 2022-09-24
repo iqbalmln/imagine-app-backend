@@ -2,12 +2,12 @@
 package example
 
 import (
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/repositories"
-	"gitlab.com/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/repositories"
+	"gitlab.privy.id/go_graphql/internal/ucase/contract"
 
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 type exampleList struct {

@@ -4,14 +4,14 @@ package example
 import (
 	"github.com/thedevsaddam/govalidator"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/entity"
-	"gitlab.com/go_graphql/internal/presentations"
-	"gitlab.com/go_graphql/internal/repositories"
-	"gitlab.com/go_graphql/internal/ucase/contract"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/entity"
+	"gitlab.privy.id/go_graphql/internal/presentations"
+	"gitlab.privy.id/go_graphql/internal/repositories"
+	"gitlab.privy.id/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 type exampleCreate struct {

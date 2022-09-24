@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 type consumerGroup struct {

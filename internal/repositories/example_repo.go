@@ -5,8 +5,8 @@ import (
 	"context"
 	"database/sql"
 
-	"gitlab.com/go_graphql/internal/entity"
-	"gitlab.com/go_graphql/pkg/mariadb"
+	"gitlab.privy.id/go_graphql/internal/entity"
+	"gitlab.privy.id/go_graphql/pkg/mariadb"
 )
 
 type example struct {

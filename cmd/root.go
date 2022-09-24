@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"gitlab.com/go_graphql/cmd/genx"
-	"gitlab.com/go_graphql/cmd/http"
-	"gitlab.com/go_graphql/cmd/migration"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/cmd/genx"
+	"gitlab.privy.id/go_graphql/cmd/http"
+	"gitlab.privy.id/go_graphql/cmd/migration"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 // Start handler registering service command

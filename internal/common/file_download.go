@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/typex"
+	"gitlab.privy.id/go_graphql/internal/typex"
 )
 
 func HTTPDownload(uri string) ([]byte, error) {

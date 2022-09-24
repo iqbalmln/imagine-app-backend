@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
 )
 
 func TestHealthCheck_Serve(t *testing.T) {

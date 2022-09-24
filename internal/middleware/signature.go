@@ -9,10 +9,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/pkg/hash"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/pkg/hash"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 // ValidateSignature header signature

@@ -7,21 +7,21 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/bootstrap"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/handler"
-	"gitlab.com/go_graphql/internal/middleware"
-	"gitlab.com/go_graphql/internal/ucase"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/msgx"
-	"gitlab.com/go_graphql/pkg/routerkit"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/bootstrap"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/handler"
+	"gitlab.privy.id/go_graphql/internal/middleware"
+	"gitlab.privy.id/go_graphql/internal/ucase"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/msgx"
+	"gitlab.privy.id/go_graphql/pkg/routerkit"
 
-	//"gitlab.com/go_graphql/pkg/mariadb"
-	//"gitlab.com/go_graphql/internal/repositories"
-	//"gitlab.com/go_graphql/internal/ucase/example"
+	//"gitlab.privy.id/go_graphql/pkg/mariadb"
+	//"gitlab.privy.id/go_graphql/internal/repositories"
+	//"gitlab.privy.id/go_graphql/internal/ucase/example"
 
-	ucaseContract "gitlab.com/go_graphql/internal/ucase/contract"
+	ucaseContract "gitlab.privy.id/go_graphql/internal/ucase/contract"
 )
 
 type router struct {

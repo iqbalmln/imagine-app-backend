@@ -10,7 +10,7 @@ import (
 	otext "github.com/opentracing/opentracing-go/ext"
 	otlog "github.com/opentracing/opentracing-go/log"
 
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 type Option struct {

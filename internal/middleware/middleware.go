@@ -4,7 +4,7 @@ package middleware
 import (
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/appctx"
 )
 
 // MiddlewareFunc is contract for middleware and must implement this type for http if need middleware http request

@@ -2,10 +2,10 @@
 package migration
 
 import (
-	"gitlab.com/go_graphql/pkg/databasex"
+	"gitlab.privy.id/go_graphql/pkg/databasex"
 	"time"
 
-	"gitlab.com/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/appctx"
 )
 
 func MigrateDatabase() {

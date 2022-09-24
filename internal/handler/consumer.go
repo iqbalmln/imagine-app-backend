@@ -4,10 +4,10 @@ package handler
 import (
 	"context"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	uContract "gitlab.com/go_graphql/internal/ucase/contract"
-	"gitlab.com/go_graphql/pkg/awssqs"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	uContract "gitlab.privy.id/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/pkg/awssqs"
 )
 
 // SQSConsumerHandler sqs consumer message processor handler

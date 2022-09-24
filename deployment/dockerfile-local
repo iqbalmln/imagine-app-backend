@@ -6,12 +6,12 @@ RUN apk update && apk --no-cache add  build-base  git bash  coreutils openssh  o
 
 # this command if you get source from bitbucket repos
 # Create the directory where the application will reside
-RUN mkdir -p /go/src/gitlab.com/go_graphql
+RUN mkdir -p /go/src/gitlab.privy.id/go_graphql
 
 RUN env GO111MODULE=on go get github.com/cortesi/modd/cmd/modd
 
 COPY deployment/live-dev.conf /go
 
-WORKDIR /go/src/gitlab.com/go_graphql
+WORKDIR /go/src/gitlab.privy.id/go_graphql
 
 CMD ["modd","-f", "/go/live-dev.conf"]

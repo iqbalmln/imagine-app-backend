@@ -1,6 +1,6 @@
 package repositories
 
-import "gitlab.com/go_graphql/pkg/mariadb"
+import "gitlab.privy.id/go_graphql/pkg/mariadb"
 
 type storer struct {
 	dbTx mariadb.Transaction

@@ -4,8 +4,8 @@ package bootstrap
 import (
 	"strings"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/pkg/kafka"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/pkg/kafka"
 )
 
 func RegistryKafkaConsumer(cfg *appctx.Config) kafka.Consumer {

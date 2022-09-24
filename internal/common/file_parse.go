@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab.com/go_graphql/internal/typex"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/internal/typex"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 func FileToBuffer(file multipart.File) (*bytes.Buffer, error) {

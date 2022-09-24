@@ -2,7 +2,7 @@
 package main
 
 import (
-	"gitlab.com/go_graphql/cmd"
+	"gitlab.privy.id/go_graphql/cmd"
 )
 
 func main() {

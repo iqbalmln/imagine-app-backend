@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/cast"
 
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 // GetHostname  get machine hostname

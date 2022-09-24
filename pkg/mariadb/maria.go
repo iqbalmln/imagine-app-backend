@@ -8,8 +8,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 
-	"gitlab.com/go_graphql/pkg/tracer"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/tracer"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 type maria struct {

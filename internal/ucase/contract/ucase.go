@@ -4,7 +4,7 @@ package contract
 import (
 	"context"
 
-	"gitlab.com/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/appctx"
 )
 
 // UseCase is a use case contract

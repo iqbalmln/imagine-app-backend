@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/consts"
-	"gitlab.com/go_graphql/internal/router"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/router"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 // NewHTTPServer creates http server instance

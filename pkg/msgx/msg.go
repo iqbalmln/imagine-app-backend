@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"gitlab.com/go_graphql/pkg/file"
+	"gitlab.privy.id/go_graphql/pkg/file"
 )
 
 var (

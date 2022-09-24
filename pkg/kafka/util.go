@@ -10,7 +10,7 @@ import (
 	"io/ioutil"
 
 	"github.com/xdg/scram"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 var SHA256 scram.HashGeneratorFcn = func() hash.Hash { return sha256.New() }

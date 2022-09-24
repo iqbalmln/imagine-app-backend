@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab.com/go_graphql/internal/typex"
-	"gitlab.com/go_graphql/pkg/cryptox"
+	"gitlab.privy.id/go_graphql/internal/typex"
+	"gitlab.privy.id/go_graphql/pkg/cryptox"
 )
 
 func ImageBase64Replacer(input string) string {

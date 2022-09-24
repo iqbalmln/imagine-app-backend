@@ -5,13 +5,13 @@ services:
     build:
       context: .
       dockerfile: deployment/dockerfiles/dockerfile-local
-    working_dir: /go/src/gitlab.com/go_graphql
+    working_dir: /go/src/gitlab.privy.id/go_graphql
     container_name: my-app
     hostname: my-app
     networks:
       - code-network
     volumes:
-      - .:/go/src/gitlab.com/go_graphql
+      - .:/go/src/gitlab.privy.id/go_graphql
     ports:
       - 8081:8081
     depends_on:

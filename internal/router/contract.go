@@ -4,9 +4,9 @@ package router
 import (
 	"net/http"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/internal/ucase/contract"
-	"gitlab.com/go_graphql/pkg/routerkit"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/internal/ucase/contract"
+	"gitlab.privy.id/go_graphql/pkg/routerkit"
 )
 
 // httpHandlerFunc is a contract http handler for router

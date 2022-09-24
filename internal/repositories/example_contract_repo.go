@@ -4,7 +4,7 @@ package repositories
 import (
 	"context"
 
-	"gitlab.com/go_graphql/internal/entity"
+	"gitlab.privy.id/go_graphql/internal/entity"
 )
 
 const (

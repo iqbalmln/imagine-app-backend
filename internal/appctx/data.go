@@ -14,7 +14,7 @@ import (
 
 	"github.com/gorilla/schema"
 
-	"gitlab.com/go_graphql/internal/consts"
+	"gitlab.privy.id/go_graphql/internal/consts"
 )
 
 var jsonContent = regexp.MustCompile(`(?i)application/((\w|\.|-)+\+)?json(-seq)?`)

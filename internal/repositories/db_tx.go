@@ -6,8 +6,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"gitlab.com/go_graphql/pkg/mariadb"
-	"gitlab.com/go_graphql/pkg/tracer"
+	"gitlab.privy.id/go_graphql/pkg/mariadb"
+	"gitlab.privy.id/go_graphql/pkg/tracer"
 )
 
 type txDB struct {

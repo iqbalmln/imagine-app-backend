@@ -6,7 +6,7 @@ import (
 
 	"github.com/brainlabs/snowflake"
 
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 var (

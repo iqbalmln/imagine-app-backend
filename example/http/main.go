@@ -5,9 +5,9 @@ import (
 	"context"
 	"net/http"
 
-	"gitlab.com/go_graphql/pkg/httpclient"
-	"gitlab.com/go_graphql/pkg/logger"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/pkg/httpclient"
+	"gitlab.privy.id/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 type (

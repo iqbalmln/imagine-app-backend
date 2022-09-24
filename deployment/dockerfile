@@ -8,10 +8,10 @@ RUN apk update && apk --no-cache add  build-base  git bash  coreutils openssh  o
 
 # this command if you get source from bitbucket repos
 # Create the directory where the application will reside
-RUN mkdir -p /go/src/gitlab.com/go_graphql
+RUN mkdir -p /go/src/gitlab.privy.id/go_graphql
 
 
-WORKDIR /go/src/gitlab.com/go_graphql
+WORKDIR /go/src/gitlab.privy.id/go_graphql
 
 COPY . .
 
@@ -29,7 +29,7 @@ FROM alpine:3.15.0
 # setup package dependencies
 RUN apk --no-cache update && apk --no-cache  add  ca-certificates bash jq curl gettext
 
-ENV BUILDDIR=/go/src/gitlab.com/go_graphql
+ENV BUILDDIR=/go/src/gitlab.privy.id/go_graphql
 ENV PROJECT_DIR=/opt/go_graphql
 
 # Setting timezone

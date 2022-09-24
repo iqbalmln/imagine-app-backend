@@ -10,9 +10,9 @@ import (
 
 	"github.com/go-redis/redis/v8"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/pkg/cache"
-	"gitlab.com/go_graphql/pkg/logger"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/pkg/cache"
+	"gitlab.privy.id/go_graphql/pkg/logger"
 )
 
 const (

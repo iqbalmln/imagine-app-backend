@@ -9,11 +9,11 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"gitlab.com/go_graphql/internal/entity"
-	"gitlab.com/go_graphql/internal/common"
-	"gitlab.com/go_graphql/pkg/mariadb"
-	"gitlab.com/go_graphql/pkg/tracer"
-	"gitlab.com/go_graphql/pkg/util"
+	"gitlab.privy.id/go_graphql/internal/entity"
+	"gitlab.privy.id/go_graphql/internal/common"
+	"gitlab.privy.id/go_graphql/pkg/mariadb"
+	"gitlab.privy.id/go_graphql/pkg/tracer"
+	"gitlab.privy.id/go_graphql/pkg/util"
 )
 
 // {{.EntityName}}er contract of {{.EntityName}}

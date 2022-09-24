@@ -3,8 +3,8 @@ package genx
 import (
 	"fmt"
 
-	"gitlab.com/go_graphql/internal/appctx"
-	"gitlab.com/go_graphql/pkg/structgen"
+	"gitlab.privy.id/go_graphql/internal/appctx"
+	"gitlab.privy.id/go_graphql/pkg/structgen"
 )
 
 func Gen() {
