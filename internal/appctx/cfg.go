@@ -36,12 +36,14 @@ func NewConfig() *Config {
 type Config struct {
 	App     *Common      `yaml:"app" json:"app"`
 	Logger  Logging      `yaml:"logger" json:"logger"`
-	WriteDB *Database    `yaml:"write_db" json:"write_db"`
-	ReadDB  *Database    `yaml:"read_db" json:"read_db"`
+	WriteDB *Database    `yaml:"db_write" json:"db_write"`
+	ReadDB  *Database    `yaml:"db_read" json:"read_db"`
 	Redis   *RedisConf   `yaml:"redis" json:"redis"`
 	AWS     AWS          `yaml:"aws" json:"aws"`
 	Kafka   *KafkaConfig `yaml:"kafka" json:"kafka"`
 	APM     APM          `yaml:"apm" json:"apm"`
+	Pubsub  PubSub       `yaml:"pubsub" json:"pubsub"`
+	GCS     GCS          `yaml:"gcs" json:"gcs"`
 }
 
 // Common general config object contract
@@ -56,6 +58,9 @@ type Common struct {
 	ReadTimeoutSecond  int    `yaml:"read_timeout_second" json:"read_timeout_second"`
 	WriteTimeoutSecond int    `yaml:"write_timeout_second" json:"write_timeout_second"`
 	DefaultLang        string `yaml:"default_lang" json:"default_lang"`
+	MerchantCoreURL    string `yaml:"merchant_core_url" json:"merchant_core_url"`
+	UserCoreURL        string `yaml:"user_core_url" json:"user_core_url"`
+	EncryptKey         string `yaml:"encrypt_key" json:"encrypt_key"`
 }
 
 // Database configuration structure
@@ -252,3 +257,17 @@ type APM struct {
 	Enable  bool   `yaml:"enable" json:"enable"`
 	Name    string `yaml:"name" json:"name"`
 }
+
+type (
+	PubSub struct {
+		AccountPath string `yaml:"account_path" json:"account_path"`
+		ProjectID   string `yaml:"project_id" json:"project_id"`
+		Topic       string `yaml:"topic" json:"topic"`
+	}
+
+	GCS struct {
+		AccountPath string `yaml:"account_path" json:"account_path"`
+		Bucket      string `yaml:"bucket" json:"bucket"`
+		Prefix      string `yaml:"prefix"`
+	}
+)
