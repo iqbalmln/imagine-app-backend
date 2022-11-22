@@ -16,16 +16,16 @@ var (
 
 // Response presentation contract object
 type Response struct {
-	Code    int         `json:"code"`
+	Code    int         `json:"-"`
 	Message interface{} `json:"message,omitempty"`
 	Errors  interface{} `json:"errors,omitempty"`
-	Data    interface{} `json:"data,omitempty"`
 	lang    string      `json:"-"`
 	Meta    interface{} `json:"meta,omitempty"`
 	msgKey  string
-	Entity  string `json:"entity"`
-	State   string `json:"state"`
-	Status  string `json:"status"`
+	Entity  string      `json:"entity"`
+	State   string      `json:"state"`
+	Status  string      `json:"status"`
+	Data    interface{} `json:"data,omitempty"`
 }
 
 // MetaData represent meta data response for multi data

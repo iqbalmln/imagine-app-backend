@@ -13,6 +13,7 @@ import (
 	"gitlab.privy.id/go_graphql/internal/handler"
 	"gitlab.privy.id/go_graphql/internal/middleware"
 	"gitlab.privy.id/go_graphql/internal/repositories"
+	"gitlab.privy.id/go_graphql/internal/ucase/login"
 	ucase "gitlab.privy.id/go_graphql/internal/ucase/shots"
 	"gitlab.privy.id/go_graphql/internal/ucase/users"
 	"gitlab.privy.id/go_graphql/pkg/logger"
@@ -122,6 +123,7 @@ func (rtr *router) Route() *routerkit.Router {
 
 	shotRepository := repositories.NewShotImplementation(db)
 	userRepository := repositories.NewUserImplementation(db)
+	loginRepository := repositories.NewLoginImplment(db)
 
 	// Shot
 	getShot := ucase.NewGetShot(shotRepository)
@@ -129,8 +131,23 @@ func (rtr *router) Route() *routerkit.Router {
 	createShot := ucase.NewCreateShot(shotRepository)
 	deleteShot := ucase.NewShotDelete(shotRepository)
 	updateShot := ucase.NewShotUpdate(shotRepository)
+	// root.Use(middleware.JwtAuthorization)
 
+	//AUTH
+	auth := rtr.router.PathPrefix("/auth").Subrouter()
+
+	register := login.NewRegister(loginRepository)
+	auth.HandleFunc("/register", rtr.handle(
+		handler.HttpRequest,
+		register,
+	)).Methods(http.MethodPost)
 	// User
+
+	login := login.NewAuth(loginRepository)
+	auth.HandleFunc("/login", rtr.handle(
+		handler.HttpRequest,
+		login,
+	)).Methods(http.MethodPost)
 	registerUser := users.NewRegisterUser(userRepository)
 
 	inV1.HandleFunc("/users/register", rtr.handle(
