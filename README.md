@@ -1,8 +1,6 @@
 # go_graphql
 go_graphql
 
-
-
 ## Running Application on Docker Container
 
 This application you can run on docker container.

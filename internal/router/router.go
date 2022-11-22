@@ -12,7 +12,9 @@ import (
 	"gitlab.privy.id/go_graphql/internal/consts"
 	"gitlab.privy.id/go_graphql/internal/handler"
 	"gitlab.privy.id/go_graphql/internal/middleware"
-	"gitlab.privy.id/go_graphql/internal/ucase"
+	"gitlab.privy.id/go_graphql/internal/repositories"
+	ucase "gitlab.privy.id/go_graphql/internal/ucase/shots"
+	"gitlab.privy.id/go_graphql/internal/ucase/users"
 	"gitlab.privy.id/go_graphql/pkg/logger"
 	"gitlab.privy.id/go_graphql/pkg/msgx"
 	"gitlab.privy.id/go_graphql/pkg/routerkit"
@@ -93,12 +95,22 @@ func (rtr *router) response(w http.ResponseWriter, resp appctx.Response) {
 	return
 }
 
+// postgresql
+const (
+	host     = "localhost"
+	port     = 5432
+	user     = "postgres"
+	password = "postgres"
+	dbname   = "intern-privy-simple-orders"
+)
+
 // Route preparing http router and will return mux router object
 func (rtr *router) Route() *routerkit.Router {
 
 	root := rtr.router.PathPrefix("/").Subrouter()
+	inV1 := root.PathPrefix("/api/v1").Subrouter()
 	//in := root.PathPrefix("/in/").Subrouter()
-	liveness := root.PathPrefix("/").Subrouter()
+	// liveness := root.PathPrefix("/").Subrouter()
 	//inV1 := in.PathPrefix("/v1/").Subrouter()
 
 	// open tracer setup
@@ -106,20 +118,74 @@ func (rtr *router) Route() *routerkit.Router {
 
 	//db := bootstrap.RegistryMariaMasterSlave(rtr.config.WriteDB, rtr.config.ReadDB, rtr.config.App.Timezone))
 	//db := bootstrap.RegistryMariaDB(rtr.config.WriteDB, rtr.config.App.Timezone)
+	db := bootstrap.RegistryPostgreSQLMasterSlave(rtr.config.ReadDB, rtr.config.WriteDB, rtr.config.App.Timezone)
+
+	shotRepository := repositories.NewShotImplementation(db)
+	userRepository := repositories.NewUserImplementation(db)
+
+	// Shot
+	getShot := ucase.NewGetShot(shotRepository)
+	getShotID := ucase.NewGetShotID(shotRepository)
+	createShot := ucase.NewCreateShot(shotRepository)
+	deleteShot := ucase.NewShotDelete(shotRepository)
+	updateShot := ucase.NewShotUpdate(shotRepository)
+
+	// User
+	registerUser := users.NewRegisterUser(userRepository)
+
+	inV1.HandleFunc("/users/register", rtr.handle(
+		handler.HttpRequest,
+		registerUser,
+	)).Methods(http.MethodPost)
+
+	inV1.HandleFunc("/shots", rtr.handle(
+		handler.HttpRequest,
+		getShot,
+	)).Methods(http.MethodGet)
+
+	inV1.HandleFunc("/shots/{id}", rtr.handle(
+		handler.HttpRequest,
+		getShotID,
+	)).Methods(http.MethodGet)
+
+	inV1.HandleFunc("/shots/create", rtr.handle(
+		handler.HttpRequest,
+		createShot,
+	)).Methods(http.MethodPost)
+
+	inV1.HandleFunc("/shots/delete/{id}", rtr.handle(
+		handler.HttpRequest,
+		deleteShot,
+	)).Methods(http.MethodDelete)
+
+	inV1.HandleFunc("/shots/update/{id}", rtr.handle(
+		handler.HttpRequest,
+		updateShot,
+	)).Methods(http.MethodPut)
 
 	// use case
-	healthy := ucase.NewHealthCheck()
+	// healthy := ucase.NewHealthCheck()
 
 	// healthy
-	liveness.HandleFunc("/liveness", rtr.handle(
-		handler.HttpRequest,
-		healthy,
-	)).Methods(http.MethodGet)
+	// liveness.HandleFunc("/liveness", rtr.handle(
+	// 	handler.HttpRequest,
+	// 	healthy,
+	// )).Methods(http.MethodGet)
+
+	// greeting := ucase.NewGreeting()
+
+	// root.HandleFunc("/greeting/{name}", rtr.handle(
+	// 	handler.HttpRequest,
+	// 	greeting,
+	// )).Methods(http.MethodPost)
+
+	// db := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+	// result :=
 
 	// this is use case for example purpose, please delete
 	//repoExample := repositories.NewExample(db)
 	//el := example.NewExampleList(repoExample)
-	//ec := example.NewPartnerCreate(repoExample)
+	//ec := example.NewPartnerCreate(repoExample
 	//ed := example.NewExampleDelete(repoExample)
 
 	// TODO: create your route here

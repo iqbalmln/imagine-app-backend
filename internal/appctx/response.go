@@ -23,6 +23,9 @@ type Response struct {
 	lang    string      `json:"-"`
 	Meta    interface{} `json:"meta,omitempty"`
 	msgKey  string
+	Entity  string `json:"entity"`
+	State   string `json:"state"`
+	Status  string `json:"status"`
 }
 
 // MetaData represent meta data response for multi data
@@ -96,6 +99,21 @@ func (r *Response) WithMessage(v interface{}) *Response {
 		r.Message = v
 	}
 
+	return r
+}
+
+func (r *Response) WithEntity(entity string) *Response {
+	r.Entity = entity
+	return r
+}
+
+func (r *Response) WithStatus(s string) *Response {
+	r.Status = s
+	return r
+}
+
+func (r *Response) WithState(state string) *Response {
+	r.State = state
 	return r
 }
 
